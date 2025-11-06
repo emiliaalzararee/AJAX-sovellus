@@ -1,0 +1,161 @@
+body {
+    color: rgb(246, 244, 244);
+    background-color: black;
+}
+
+#header {
+      font-size: 6rem;
+  font-weight: bold;
+  color: transparent; 
+  text-transform: uppercase; 
+  text-align: center;
+  background: url('./huehue.gif') no-repeat center center / cover;
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  margin: 0; 
+  background-color: rgb(252, 254, 253);
+}
+
+.contact form {
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow:8px 8px 8px 8px rgba(183, 68, 114, 0.5);
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  
+ 
+
+}
+
+.choosing-card label {
+  padding: 10px;
+  color:rgb(2, 115, 126);
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  align-items: center;
+  font-size: 170%;
+}
+
+.choosing-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;              /* add some space around the box */
+  padding: 40px;                  /* padding all around */
+  padding-bottom: 80px;           /* extra space BELOW the button */
+  background-color: rgb(15, 15, 15);
+  border: 2px solid rgb(2, 115, 126);
+  border-radius: 15px;
+  width: 400px;
+  box-shadow: 0 0 30px rgba(2, 115, 126, 0.5);
+}
+
+#controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+#controls select,
+#controls input,
+#controls button {
+  width: 80%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+#controls button {
+  background-color: rgb(2, 115, 126);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#controls button:hover {
+  background-color: rgb(0, 80, 88);
+  transform: scale(1.05);
+}
+
+
+
+.choosing-card.minimized {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  width: 260px;
+  padding: 10px 12px;
+  z-index: 50;
+  transition: all 0.45s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6), 0 0 30px rgba(2,115,126,0.25);
+}
+
+
+.movie-info-box {
+  background-color: rgb(15,15,15);
+  border: 2px solid rgb(2,115,126);
+  border-radius: 12px;
+  padding: 16px;
+  color: #fff;
+  width: 340px;
+  margin: 18px auto;
+  position: relative;
+  box-shadow: 0 6px 20px rgba(2,115,126,0.2);
+}
+
+
+.movie-info-box img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+
+.movie-info-box .close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  color: rgb(2,115,126);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+
+.previous-row {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap; 
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+
+.movie-thumb {
+  width: 60px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 2px solid rgba(2,115,126,0.6);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+.movie-thumb:hover { transform: translateY(-4px); }
+
+
+.thumb-title {
+  font-size: 0.72rem;
+  color: #ddd;
+  text-align: center;
+}
