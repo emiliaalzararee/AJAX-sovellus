@@ -1,0 +1,203 @@
+body {
+    color: rgb(246, 244, 244);
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+#header {
+  font-size: 6rem;
+  font-weight: bold;
+  color: transparent; 
+  text-transform: uppercase; 
+  text-align: center;
+  background: url('./huehue.gif') no-repeat center center / cover;
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  margin: 0; 
+  background-color: rgb(252, 254, 253);
+}
+
+#search-section{
+    margin: 2rem auto;
+}
+
+#search{
+    padding: 10px;
+    width: 250px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#searchBtn{
+    padding: 5px 8px;
+    border:rgb(4, 113, 133) ;
+    border-radius: 8px;
+    background-color: rgb(rgb(0, 0, 0));
+    color: rgb(10, 10, 10);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+   
+}
+
+#searchBtn:hover{
+    background-color: rgb(4, 113, 133);
+    color: white;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+ z-index: 1000;
+  animation: fadeIn 0.4s ease;
+}
+
+.movie-card {
+  display: flex;          
+  flex-direction: row;     
+  gap: 20px;
+  width: 600px;
+  background-color: black;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgb(4, 113, 133);
+}
+
+.movie-card img {
+  width: 200px;
+  
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+  color:rgb(4, 113, 133) ;
+}
+
+
+
+
+.close-btn {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background:none;
+    border: none;
+    color: #0580a2;
+    font-size: 22px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close-btn:hover{
+    transform: scale(1.2);
+    color: #6dbced;
+}
+
+.previous-row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 2rem;
+}
+
+.previous-card {
+  position: relative;
+  display: flex;   
+  flex-direction: row;
+  gap: 10px;       
+  width: 200px;               
+  background-color: #111;     
+  border-radius: 12px;        
+  box-shadow: 0 5px 15px rgba(4, 113, 133, 0.5);
+  padding: 8px;
+  align-items: flex-start;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.previous-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(4, 113, 133, 0.7);
+}
+
+
+.previous-card img {
+  width: 60px;                
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+
+.previous-card .movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+  color: #eee;
+}
+
+.previous-card .movie-info h2 {
+  margin: 0 0 4px 0;
+  font-size: 0.9rem;
+  color: #4dc0d0;
+}
+
+.previous-card .movie-info p {
+  margin: 2px 0;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  color: #ccc;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+ 
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.search-wrapper {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #111;
+    border: 2px solid rgb(55, 126, 133);
+    border-radius: 12px;
+    box-shadow: 0 12px 35px rgba(19, 134, 154, 0.7);
+    text-align: center;
+}
+
+.close-card-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    color: rgba(19, 134, 154, 0.7);
+    font-size: 16px;
+    cursor: pointer;
+    font-family: bold;
+    color: #4dc0d0;
+}
+
+.close-card-btn:hover {
+    transform: scale(1.2);
+    color: rgba(96, 202, 221, 0.7);
+}
